@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import "./../styles/App.css";
-
+import StateData from "./StateData";
 // Do not alter the states const and values inside it.
 const states = [
   {
@@ -155,7 +155,17 @@ const states = [
 ];
 
 function App() {
-  return <div id="main"></div>;
+  return <div id="main">
+  
+      <ul>
+        {states.map((item,index)=>{
+          return <StateData state={item} id={"state"+(index+1)}></StateData>
+        })}
+      </ul>
+
+    
+
+  </div>
 }
 
 export default App;
