@@ -4,9 +4,10 @@ import Town from './Town'
 export default function City(props) {
     const [toggle,setToggle] = useState(false);
 
-    function handler() {
+    function handler(event) {
         setToggle(!toggle);
         console.log("city is clicked ",toggle)
+        event.stopPropagation();
     }
 
   return (
